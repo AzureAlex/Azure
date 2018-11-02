@@ -2,7 +2,7 @@
 # Path
 $ScriptPath = "C:\Temp\AzureScript\"
 $TenantName = "tenant"
-$UserName = "xxx@samlink.fi"
+$UserName = "xxx@domain.com"
 
 #Import csv file and get row 1 data
 $information = import-csv "$ScripPath\automaatio.csv" -Header Rg, Tag, Group
