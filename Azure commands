@@ -1,0 +1,27 @@
+#Kirjaudutaan Azurere ja haluttuun Subscription 
+
+Get-AzureRMSubscription ( näyttää tilauksen)  
+
+Get-AzureRmResourceProvider (näyttää Azuren resurssien jakajat)  
+
+ 
+
+##Resurssien luomista  
+
+#Resurssiryhmä  
+
+Remove-AzureRmResourceGroup -Name "grourname" (poistaa resurssi ryhmän)  
+
+New-AzureRmResourceGroup -Name Testi -Location "west europe" (resurssi ryhmän luonti)  
+
+#Verkot  
+ 
+$vnet = New-AzureRmVirtualNetwork -ResourceGroupName $rg.ResourceGroupName -Name '20533E0204-vnet' -AddressPrefix '10.11.0.0/16' -Location $rg.Location (luodaan uusi verkko)  
+
+Add-AzureRmVirtualNetworkSubnetConfig -Name 'Subnet1' -VirtualNetwork $vnet -AddressPrefix '10.11.0.0/24 (luodaan aliverkko tuolle verkolle)  
+
+Set-AzureRmVirtualNetwork -VirtualNetwork $vnet (päivitetään verkot)  
+
+Test-NetConnection -ComputerName 10.0.1.4 -TraceRoute (testataan reititys)  
+
+ 
