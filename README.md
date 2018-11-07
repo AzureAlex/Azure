@@ -1,2 +1,2 @@
 # Azure
-Azure commands and scripts for me. Purpose: training, testing and development.
+Azure commands and scripts for me. Purpose: training, testing and development (ARM and powershell).
